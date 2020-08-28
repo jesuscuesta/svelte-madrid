@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "svelte-madrid",
+  "description": "Comienzo de la web de Svelte Madrid",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
@@ -9,7 +9,9 @@
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
-    "test": "run-p --race dev cy:run"
+    "test": "run-p --race dev cy:run",
+    "export:sapper": "sapper export --legacy --entry '/ /404'",
+    "postexport": "mv __sapper__/export/404/index.html __sapper__/export/404.html"
   },
   "dependencies": {
     "compression": "^1.7.1",
